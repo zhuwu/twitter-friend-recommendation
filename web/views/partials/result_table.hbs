@@ -1,0 +1,47 @@
+<div class="panel-body">
+  {{#if result}}
+    <table class="table table-bordered">
+      <thead>
+      <tr>
+        <th colspan="2">Similarity: {{result.similarity}}</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>{{result.user1}}</td>
+        <td>{{result.user2}}</td>
+      </tr>
+      <tr>
+        <td>
+          {{#each result.hash_tags1}}
+            <span class="{{#highlight ../result.common_hash_tags @key}}{{/highlight}}">{{@key}}: {{this}}</span>
+            <br>
+          {{/each}}
+        </td>
+        <td>
+          {{#each result.hash_tags2}}
+            <span class="{{#highlight ../result.common_hash_tags @key}}{{/highlight}}">{{@key}}: {{this}}</span>
+            <br>
+          {{/each}}
+        </td>
+      </tr>
+      <tr>
+        <td>
+          {{#each result.words1}}
+            <span class="{{#highlight ../result.common_words @key}}{{/highlight}}">{{@key}}: {{this}}</span>
+            <br>
+          {{/each}}
+        </td>
+        <td>
+          {{#each result.words2}}
+            <span class="{{#highlight ../result.common_words @key}}{{/highlight}}">{{@key}}: {{this}}</span>
+            <br>
+          {{/each}}
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  {{else}}
+    <p>Sorry, this user does not exist in database.</p>
+  {{/if}}
+</div>

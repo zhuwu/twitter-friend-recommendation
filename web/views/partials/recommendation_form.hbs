@@ -1,0 +1,15 @@
+<form id="recommend-form" class="form-horizontal" action="/query" method="get" autocomplete="off">
+  <div class="panel panel-primary">
+    <div class="panel-heading">Query for Recommendation</div>
+    <div class="panel-body">
+      <div class="form-group">
+        <label for="user-name" class="control-label col-md-3">Twitter User Name</label>
+
+        <div class="col-md-8">
+          <input id="user-name" name="username" class="form-control " type="text" value="{{username}}" maxlength="32">
+        </div>
+      </div>
+      <div class="form-group"><button type="submit" class="btn btn-primary">Submit</button></div>
+    </div>
+  </div>
+</form>

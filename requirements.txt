@@ -1,0 +1,7 @@
+ipython
+nltk
+simplejson
+jsonfield
+peewee
+psycopg2
+pytest
